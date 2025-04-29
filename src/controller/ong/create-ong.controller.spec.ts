@@ -6,11 +6,11 @@ import { MakeOng } from "test/factories/make-ong-factories";
 
 describe('Create Ong - Test e2e', () => {
   beforeAll(async () => {
-    app.ready()
+    await app.ready()
   })
 
   afterAll(async () => {
-    app.close()
+    await app.close()
   })
 
   it('Should create a new ong', async () => {

@@ -5,11 +5,11 @@ import request from 'supertest'
 
 describe('Fetch Nearby Ong - Test e2e', () => {
   beforeAll(async () => {
-    app.ready()
+    await app.ready()
   })
 
   afterAll(async () => {
-    app.close()
+    await app.close()
   })
 
   it('should be able to fetch nearby ong', async () => {

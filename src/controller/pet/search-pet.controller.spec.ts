@@ -101,8 +101,6 @@ describe('Search Pets (E2E)', () => {
       .get('/ong/pets')
       .query({ city: ong.city, size: 'small' })
 
-      console.log(response.body)
-
     expect(response.status).toBe(200)
     expect(response.body.pets).toHaveLength(1)
   })

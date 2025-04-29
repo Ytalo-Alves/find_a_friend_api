@@ -73,14 +73,19 @@ describe('Get pet - Unit Test', () => {
 
   it('should be able to search pet by city and environment', async () => {
     const ong = await ongRepositories.create(MakeOng())
-
-    await petRepositories.create(MakePet({ong_id: ong.id, environment: 'indoor'}))
-    await petRepositories.create(MakePet({ong_id: ong.id, environment: 'outdoor'}))
-
-    const { pets } = await sut.execute({city: ong.city, environment: 'indoor', })
-
-
+  
+    await petRepositories.create(
+      MakePet({ ong_id: ong.id, environment: 'INDOOR' }) // padronizado
+    )
+    await petRepositories.create(
+      MakePet({ ong_id: ong.id, environment: 'OUTDOOR' }) // padronizado
+    )
+  
+    const { pets } = await sut.execute({
+      city: ong.city,
+      environment: 'INDOOR', // usa o mesmo formato
+    })
+  
     expect(pets).toHaveLength(1)
-
   })
 })

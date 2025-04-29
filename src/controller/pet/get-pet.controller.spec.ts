@@ -6,11 +6,11 @@ import { MakePet } from "test/factories/make-pet-factories";
 
 describe('Get pet - Test e2e', () => {
   beforeAll(async () => {
-    app.ready()
+    await app.ready()
   })
 
   afterAll(async () => {
-    app.close()
+    await app.close()
   })
 
   it('should get a pet', async () => {
