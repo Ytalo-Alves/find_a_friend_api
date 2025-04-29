@@ -2,7 +2,7 @@
 
 API para conectar ONGs e pessoas interessadas em adotar pets. Permite cadastro e autenticação de ONGs, cadastro e busca de pets, além de busca de ONGs próximas.
 
-## Tecnologias
+## Tecnologias do projeto
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="24"/> Node.js
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="24"/> TypeScript
 - ⚡ Fastify
